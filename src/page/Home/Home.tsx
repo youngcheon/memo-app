@@ -13,7 +13,7 @@ const Home: React.FC<ScreenProps<'Home'>> = ({navigation}) => {
 
     useEffect(() => {
         navigation.setOptions({headerTitle: `메모리스트(${memos.length})`});
-    }, [memos, navigation]);
+    }, [memos]);
 
     return (
         <S.Screen>
@@ -23,9 +23,7 @@ const Home: React.FC<ScreenProps<'Home'>> = ({navigation}) => {
                         <MemoBox
                             key={memo.id}
                             onDelete={() => dispatch(deleteMemo({id: memo.id}))}
-                            onPress={() => {
-                                console.log('click');
-                            }}
+                            onPress={() => navigation.push('Detail', {id: memo.id})}
                             {...memo}
                         />
                     );

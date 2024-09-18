@@ -24,6 +24,7 @@ const StackNavigator: React.FC = () => {
                     headerTitleStyle: {
                         fontWeight: 700,
                     },
+                    headerBackTitleVisible: false,
                 }}
             >
                 <Stack.Screen name="Home" component={Home} options={{title: '메모 리스트'}} />

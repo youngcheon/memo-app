@@ -16,7 +16,9 @@ const MemoBox: React.FC<MemoBoxProps> = (props) => {
                     <S.Title>{props.title}</S.Title>
                     <S.DateText>{format(props.updatedAt, 'yyyy.MM.dd')}</S.DateText>
                 </S.TitleSection>
-                <S.Description>{props.description}</S.Description>
+                <S.Description numberOfLines={1} ellipsizeMode="tail">
+                    {props.description}
+                </S.Description>
             </S.DetailSection>
             <S.DeleteButton onPress={props.onDelete}>
                 <Text>X</Text>
