@@ -4,7 +4,6 @@ export const TitleSection = styled.View`
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 20px;
 `;
@@ -30,11 +29,12 @@ export const DateText = styled.Text`
 
 export const DescriptionSection = styled.ScrollView`
     width: 100%;
+    height: 100%;
     padding: 5%;
 `;
 
 export const Title = styled.Text`
-    flex: 3;
+    flex: 4;
     font-weight: 900;
     font-size: 25px;
 `;

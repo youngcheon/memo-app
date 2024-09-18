@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {SafeAreaView, Text, TextInput, TouchableOpacity} from 'react-native';
+import {Text, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
 import {ScreenProps} from '@/types';
 import {useAppDispatch, useAppSelector} from '@/hooks/useRedux';
 import * as S from './styled';
