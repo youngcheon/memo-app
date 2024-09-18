@@ -33,10 +33,15 @@ export const DescriptionSection = styled.ScrollView`
     padding: 5%;
 `;
 
+export const Description = styled.Text`
+    color: ${(props) => props.theme.color.main};
+`;
+
 export const Title = styled.Text`
     flex: 4;
     font-weight: 900;
     font-size: 25px;
+    color: ${(props) => props.theme.color.main};
 `;
 
 export const TitleInput = styled.TextInput`

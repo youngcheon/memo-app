@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Text, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
+import {TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
 import {ScreenProps} from '@/types';
 import {useAppDispatch, useAppSelector} from '@/hooks/useRedux';
 import * as S from './styled';
@@ -75,7 +75,7 @@ const Detail: React.FC<ScreenProps<'Detail'>> = ({navigation, route}) => {
                 {editMode.value === true ? (
                     <TextInput multiline defaultValue={memo?.description} onChangeText={(text) => setEditDesc(text)} />
                 ) : (
-                    <Text>{memo?.description}</Text>
+                    <S.Description>{memo?.description}</S.Description>
                 )}
             </S.DescriptionSection>
         </SafeAreaView>
