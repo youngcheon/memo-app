@@ -32,6 +32,7 @@ export const Title = styled.Text`
     font-size: 19px;
     font-weight: 900;
     max-width: 60%;
+    color: ${(props) => props.theme.color.main};
 `;
 
 export const DateText = styled.Text`
