@@ -22,9 +22,10 @@ const StackNavigator: React.FC = () => {
                     },
                     headerTintColor: color.white,
                     headerTitleStyle: {
-                        fontWeight: 700,
+                        fontWeight: '700',
                     },
                     headerBackTitleVisible: false,
+                    headerTitleAlign: 'center',
                 }}
             >
                 <Stack.Screen name="Home" component={Home} options={{title: '메모 리스트'}} />
