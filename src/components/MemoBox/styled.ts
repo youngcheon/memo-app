@@ -29,8 +29,8 @@ export const TitleSection = styled.View`
 `;
 
 export const Title = styled.Text`
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 19px;
+    font-weight: 900;
 `;
 
 export const DateText = styled.Text`
@@ -40,5 +40,6 @@ export const DateText = styled.Text`
 
 export const Description = styled.Text`
     font-size: 15px;
+    max-width: 90%;
     color: ${(props) => props.theme.color.grey};
 `;

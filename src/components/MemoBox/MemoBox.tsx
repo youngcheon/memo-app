@@ -1,8 +1,9 @@
 import React from 'react';
 import {Memo} from '@/types';
 import * as S from './styled';
-import {Text, TouchableOpacityProps} from 'react-native';
+import {TouchableOpacityProps} from 'react-native';
 import {format} from 'date-fns';
+import DeleteIcon from '@/assets/icons/delete.svg';
 
 interface MemoBoxProps extends Omit<Memo, 'id'>, TouchableOpacityProps {
     onDelete: () => void;
@@ -21,7 +22,7 @@ const MemoBox: React.FC<MemoBoxProps> = (props) => {
                 </S.Description>
             </S.DetailSection>
             <S.DeleteButton onPress={props.onDelete}>
-                <Text>X</Text>
+                <DeleteIcon width={20} height={20} />
             </S.DeleteButton>
         </S.Container>
     );

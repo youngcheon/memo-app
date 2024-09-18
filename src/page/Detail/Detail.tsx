@@ -39,6 +39,7 @@ const Detail: React.FC<ScreenProps<'Detail'>> = ({navigation, route}) => {
             return;
         }
         dispatch(deleteMemo({id: memo.id}));
+        navigation.reset({routes: [{name: 'Home'}]});
     };
 
     return (
