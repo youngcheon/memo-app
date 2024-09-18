@@ -5,7 +5,6 @@ import MemoBox from '@/components/MemoBox';
 import {addMemo, deleteMemo} from '@/redux/slice/memoSlice';
 import * as S from './styled';
 import Button from '@/components/Button';
-import {ScrollView} from 'react-native';
 
 const Home: React.FC<ScreenProps<'Home'>> = ({navigation}) => {
     const dispatch = useAppDispatch();
@@ -15,22 +14,29 @@ const Home: React.FC<ScreenProps<'Home'>> = ({navigation}) => {
         navigation.setOptions({headerTitle: `메모리스트(${memos.length})`});
     }, [memos]);
 
+    const onDelete = (id: string) => {
+        dispatch(deleteMemo({id}));
+    };
+
+    const onPress = (id: string) => {
+        navigation.push('Detail', {id});
+    };
+
+    const onAdd = () => {
+        dispatch(addMemo());
+    };
+
     return (
         <S.Screen>
-            <ScrollView>
+            <S.ScrollView>
                 {memos.map((memo) => {
                     return (
-                        <MemoBox
-                            key={memo.id}
-                            onDelete={() => dispatch(deleteMemo({id: memo.id}))}
-                            onPress={() => navigation.push('Detail', {id: memo.id})}
-                            {...memo}
-                        />
+                        <MemoBox key={memo.id} onDelete={() => onDelete(memo.id)} onPress={() => onPress(memo.id)} {...memo} />
                     );
                 })}
-            </ScrollView>
+            </S.ScrollView>
             <S.ButtonWrapper>
-                <Button text="추가" onPress={() => dispatch(addMemo())} />
+                <Button text="추가" onPress={onAdd} />
             </S.ButtonWrapper>
         </S.Screen>
     );

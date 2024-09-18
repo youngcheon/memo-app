@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -11,7 +11,7 @@ export const Container = styled.View`
     padding: 25px;
 `;
 
-export const DetailSection = styled.TouchableOpacity`
+export const DetailSection = styled.View`
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -31,6 +31,7 @@ export const TitleSection = styled.View`
 export const Title = styled.Text`
     font-size: 19px;
     font-weight: 900;
+    max-width: 60%;
 `;
 
 export const DateText = styled.Text`

@@ -15,3 +15,7 @@ export const ButtonWrapper = styled.View`
     align-items: center;
     padding: 20px;
 `;
+
+export const ScrollView = styled.ScrollView.attrs({
+    contentContainerStyle: {paddingBottom: 80},
+})``;
